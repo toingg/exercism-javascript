@@ -9,8 +9,12 @@
 
 // console.log(setering + " " + penggabungan)
 
-function backDoorPassword(word) {
-  return word.slice(0, 1).toUpperCase + word.slice(1) + ", please";
-}
+// function backDoorPassword(word) {
+//   return word.slice(0, 1).toUpperCase() + word.slice(1) + ", please";
+// }
 
-console.log(backDoorPassword("test"));
+// console.log(backDoorPassword("test"));
+
+// console.log(2 === "2");
+const list = ["a", "b", "c"];
+console.log(list.length);
