@@ -99,5 +99,48 @@ function limesToCut(wedgesNeeded, limes) {
 //   return orders;
 // }
 
-// console.log(remainingOrders(5, ["Energizer", "All or Nothing", "Green Garden"]));
+// // console.log(remainingOrders(5, ["Energizer", "All or Nothing", "Green Garden"]));
+// const obj = { greeting: "hello world" };
 
+// obj.greeting = "Hi there!";
+// obj["greeting"] = "Welcome.";
+
+// obj.nama = "new value 1";
+// obj.test = "test";
+// obj["new key 2"] = "new value 2";
+
+// delete obj.test;
+
+// console.log(obj);
+
+// console.log(obj.hasOwnProperty('greeting'))
+// console.log(obj.hasOwnProperty('age'))
+
+// const objTwo = {
+//   name: 'Ali',
+//   age: 65,
+// };
+
+// for (let key in objTwo) {
+//   console.log(key, objTwo[key]);
+// }
+// // name Ali
+// // age 65
+
+function ticketStatus(tickets, ticketId) {
+  for (let key in tickets) {
+    if (key === ticketId) {
+      return `sold to ${tickets[key]}`;
+    } else if (key !== ticketId) {
+      return "unknown ticket id";
+    } 
+  }
+}
+
+const tickets = {
+  AAA: null,
+  BBB: "Amanda",
+  CCC: "Bla",
+};
+
+console.log(ticketStatus(tickets, "BBB"));
