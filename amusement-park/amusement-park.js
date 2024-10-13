@@ -33,16 +33,17 @@ export function revokeTicket(visitor) {
  * @returns {string} ticket status
  */
 export function ticketStatus(tickets, ticketId) {
-  for (let key in tickets) {
-    if (key === ticketId && tickets[key] !== null) {
-      return `sold to ${tickets[key]}`;
-    } else if (key === ticketId && tickets[key] === null) {
-      return "not sold";
-    }
-  }
-  return "unknown ticket id";
-}
+  const name = tickets[ticketId];
 
+  switch (name) {
+    case undefined:
+      return "unknown ticket id";
+    case null:
+      return "not sold";
+    default:
+      return `sold to ${name}`;
+  }
+}
 /**
  * Determines the status a ticket has in the ticket tracking object
  * and returns a simplified status message.
@@ -52,15 +53,14 @@ export function ticketStatus(tickets, ticketId) {
  * @returns {string} ticket status
  */
 export function simpleTicketStatus(tickets, ticketId) {
-  for (let key in tickets) {
-    if (key === ticketId && tickets[key] !== null) {
-      return tickets[key];
-    }
+  const name = tickets[ticketId];
+
+  if (name === undefined || name === null) {
+    return "invalid ticket !!!";
   }
-  return "invalid ticket !!!";
 
+  return name;
 }
-
 /**
  * Determines the version of the GTC that was signed by the visitor.
  *
@@ -68,10 +68,5 @@ export function simpleTicketStatus(tickets, ticketId) {
  * @returns {string | undefined} version
  */
 export function gtcVersion(visitor) {
-  for (let key in visitor){
-    if(key === "gtc"){
-      return visitor[key]?.version
-    }
-  }
-  return undefined
+  return visitor.gtc?.version;
 }
