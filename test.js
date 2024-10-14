@@ -127,20 +127,49 @@ function limesToCut(wedgesNeeded, limes) {
 // // name Ali
 // // age 65
 
-function ticketStatus(tickets, ticketId) {
-  for (let key in tickets) {
-    if (key === ticketId) {
-      return `sold to ${tickets[key]}`;
-    } else if (key !== ticketId) {
-      return "unknown ticket id";
-    } 
-  }
-}
+// function ticketStatus(tickets, ticketId) {
+//   for (let key in tickets) {
+//     if (key === ticketId) {
+//       return `sold to ${tickets[key]}`;
+//     } else if (key !== ticketId) {
+//       return "unknown ticket id";
+//     } 
+//   }
+// }
 
-const tickets = {
-  AAA: null,
-  BBB: "Amanda",
-  CCC: "Bla",
-};
+// const tickets = {
+//   AAA: null,
+//   BBB: "Amanda",
+//   CCC: "Bla",
+// };
 
-console.log(ticketStatus(tickets, "BBB"));
+// console.log(ticketStatus(tickets, "BBB"));
+// x = [1,2,3]
+// console.log(x.length)
+// x = x.join('')
+// y = String([1, 2, 3])
+
+
+
+// console.log(x)
+// console.log(y)
+
+// function luckyNumber(value) {
+//   const numStr = String(value);
+//   let test = 0;
+//   let j = numStr.length - 1;
+//   for (let i = 0; i < numStr.length / 2; i++) {
+//     test++
+//     console.log(test);
+//     if (numStr[i] !== numStr[j]) {
+//       return false;
+//     }
+//     j--;
+//   }
+//   return true;
+// }
+
+// luckyNumber(1234321)
+
+input = 'abc'
+console.log(Boolean(Number(String(input))))
