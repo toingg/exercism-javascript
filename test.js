@@ -171,5 +171,57 @@ function limesToCut(wedgesNeeded, limes) {
 
 // luckyNumber(1234321)
 
-input = 'abc'
-console.log(Boolean(Number(String(input))))
+// input = 'abc'
+// console.log(Boolean(Number(String(input))))
+
+
+// function testDefaultValue(a = 2, b) {
+//   console.log(a);
+//   console.log(b);
+  
+//   return a + b
+// }
+
+// function testDefaultValue2(a, b = 2) {
+//   console.log(a);
+//   console.log(b);
+  
+//   return a + b
+// }
+
+
+// console.log(testDefaultValue(5));
+// console.log(testDefaultValue2(5));
+
+// const func = (a, b) => {
+
+// }
+
+// function empty(a) {
+//   console.log(a)
+// }
+
+// empty();
+
+// function scaleRecipe(recipe, portion){
+//   const scaledRecipe = {}
+//   for (const ingredient in recipe){
+//       scaledRecipe[ingredient] = recipe[ingredient] * portion
+//       console.log(ingredient)
+//       console.log(recipe[ingredient])
+//   }
+
+//   return scaledRecipe
+
+// }
+
+// const recipe2 = {
+//   'sauce': 0.6,
+//   'noodles': 300,
+//   'carrots': 1,
+//   'mozzarella': 0.5,
+//   'ricotta': 50,
+//   'béchamel': 0.1,
+//   'tofu': 100,
+// };
+// scaleRecipe(recipe2, 2)
