@@ -224,4 +224,7 @@ function limesToCut(wedgesNeeded, limes) {
 //   'béchamel': 0.1,
 //   'tofu': 100,
 // };
-// scaleRecipe(recipe2, 2)
+// scaleRecipe(recipe2, 2)\
+
+const tes = "Happy Birthday!"
+console.log(tes.length);
