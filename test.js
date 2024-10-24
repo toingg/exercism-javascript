@@ -226,5 +226,26 @@ function limesToCut(wedgesNeeded, limes) {
 // };
 // scaleRecipe(recipe2, 2)\
 
-const tes = "Happy Birthday!"
-console.log(tes.length);
+// const tes = "Happy Birthday!"
+// console.log(tes.length);
+// function getDataFromServer(budi) {
+//   console.log("Mengambil data dari server...");
+
+//   // Simulasi tugas asinkron (misalnya, fetch data)
+//   setTimeout(() => {
+//     const data = { id: 1, name: "Fachrizal" }; // Data simulasi
+//     console.log("Data berhasil diambil");
+//     budi(data); // Memanggil callback function dengan data
+//   }, 2000);
+// }
+
+// function processData(data) {
+//   console.log("Memproses data:", data);
+// }
+
+// console.log("Mulai");
+
+// // Memanggil getDataFromServer dengan processData sebagai callback
+// getDataFromServer(processData);
+
+// console.log("Selesai");
