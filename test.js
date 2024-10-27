@@ -250,4 +250,8 @@ function limesToCut(wedgesNeeded, limes) {
 
 // console.log("Selesai");
 
+const numberOfMoons = [0, 2, 14];
+const [venus, mars, neptune] = numberOfMoons;
 
+console.log(neptune);
+// => 14
