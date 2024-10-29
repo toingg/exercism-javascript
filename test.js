@@ -133,7 +133,7 @@ function limesToCut(wedgesNeeded, limes) {
 //       return `sold to ${tickets[key]}`;
 //     } else if (key !== ticketId) {
 //       return "unknown ticket id";
-//     } 
+//     }
 //   }
 // }
 
@@ -148,8 +148,6 @@ function limesToCut(wedgesNeeded, limes) {
 // console.log(x.length)
 // x = x.join('')
 // y = String([1, 2, 3])
-
-
 
 // console.log(x)
 // console.log(y)
@@ -174,21 +172,19 @@ function limesToCut(wedgesNeeded, limes) {
 // input = 'abc'
 // console.log(Boolean(Number(String(input))))
 
-
 // function testDefaultValue(a = 2, b) {
 //   console.log(a);
 //   console.log(b);
-  
+
 //   return a + b
 // }
 
 // function testDefaultValue2(a, b = 2) {
 //   console.log(a);
 //   console.log(b);
-  
+
 //   return a + b
 // }
-
 
 // console.log(testDefaultValue(5));
 // console.log(testDefaultValue2(5));
@@ -250,8 +246,162 @@ function limesToCut(wedgesNeeded, limes) {
 
 // console.log("Selesai");
 
-const numberOfMoons = [0, 2, 14];
-const [venus, mars, neptune] = numberOfMoons;
+// const numberOfMoons = [0, 2, 14];
+// const [venus, mars, neptune] = numberOfMoons;
 
-console.log(neptune);
-// => 14
+// console.log(neptune);
+// // => 14
+
+// const moreThan = (num) => {
+//   return num > 7
+// }
+// const numbers = [1, 3, 5, 7, 9];
+// console.log(numbers.findIndex(moreThan));
+// // => 4
+// console.log(numbers.findIndex((num) => num > 9));
+// // => -1
+
+// class Car {
+//   constructor(color, weight) {
+//     this.color = color;
+//     this.weight = weight;
+//     this.engineRunning = false;
+//   }
+
+//   startEngine() {
+//     this.engineRunning = true;
+//   }
+
+//   addGas(litre) {
+//     // ...
+//   }
+// }
+
+// const myCar = new Car();
+// myCar.startEngine();
+// console.log(myCar.engineRunning);
+
+// class Car {
+//   constructor() {
+//     this._mileage = 0;
+//   }
+
+//   // get mileage() {
+//   //   return this._mileage;
+//   // }
+
+//   set mileage(value) {
+//     throw new Error(`Mileage cannot be manipulated, ${value} is ignored.`);
+//     // Just an example, usually you would not provide a setter in this case.
+//   }
+// }
+
+// const myCar = new Car();
+// console.log(myCar.mileage); // => Undefined, but if myCar._mileage = 0. Cause the method get mileage
+// // => 0
+// // myCar.mileage = 100;
+// // => Error: Mileage cannot be manipulated, 100 is ignored.
+
+// class Size {
+//   //   constructor(width = 80, height = 60) {
+//   //     this.width = width;
+//   //     this.height = height;
+//   //   }
+//   //   resize(newWidth, newHeight) {
+//   //     this.width = newWidth;
+//   //     this.height = newHeight;
+//   //   }
+//   constructor(width = 80, height = 60) {
+//     this._width = width;
+//     this._height = height;
+//   }
+//   resize(newWidth, newHeight) {
+//     this._width = newWidth;
+//     this._height = newHeight;
+//   }
+//   get width() {
+//     return this._width;
+//   }
+//   get height() {
+//     return this._height;
+//   }
+// }
+
+// class Position {
+//   constructor(x = 0, y = 0) {
+//     this._x = x;
+//     this._y = y;
+//   }
+//   move(newX, newY) {
+//     this._x = newX;
+//     this._y = newY;
+//   }
+//   get x() {
+//     return this._x;
+//   }
+//   get y() {
+//     return this._y;
+//   }
+// }
+
+// class ProgramWindow {
+//   constructor() {
+//     this._screenSize = new Size(800, 600);
+//     this._size = new Size();
+//     this._position = new Position();
+//   }
+//   resize(newSize) {
+//     // Calculate the maximum width and height based on position and screen size
+//     const maxWidth = this._screenSize.width - this.position.x;
+//     const maxHeight = this._screenSize.height - this.position.y;
+
+//     this.size._width = Math.min(Math.max(newSize.width, 1), maxWidth);
+
+//     this.size._height = Math.min(Math.max(newSize.height, 1), maxHeight);
+//   }
+
+//   get screenSize() {
+//     return this._screenSize;
+//   }
+//   get size() {
+//     return this._size;
+//   }
+//   get position() {
+//     return this._position;
+//   }
+// }
+
+// const newWind = new ProgramWindow();
+
+// // console.log(newWind.screenSize);
+// // console.log(newWind.size);
+// // console.log(newWind.position);
+
+// const programWindow1 = new ProgramWindow();
+// const newSize1 = new Size(300, 200);
+// programWindow1.resize(newSize1);
+// console.log(programWindow1.position)
+// console.log(programWindow1.size);
+
+// const programWindow2 = new ProgramWindow();
+// const newSize2 = new Size(0, -10);
+// programWindow2.resize(newSize2);
+// console.log(programWindow2.size);
+
+const re = /home/gi;
+const reg = /home/;
+
+const str = 'Home, sweet home.';
+const myArray = str.match(reg);
+console.log(myArray);
+
+const funnyQuote =
+  'If you see someone crying, ask if it is because of their haircut.';
+const regex1 = /someone/;
+const regex2 = /happy/;
+
+console.log(funnyQuote.match(regex1));
+// => ["someone", index: 3, input: "If you see someone crying, ask if it is because of their haircut.", groups: undefined]
+
+funnyQuote.match(regex2);
+// => null
