@@ -388,20 +388,58 @@ function limesToCut(wedgesNeeded, limes) {
 // programWindow2.resize(newSize2);
 // console.log(programWindow2.size);
 
-const re = /home/gi;
-const reg = /home/;
+// const re = /home/gi;
+// const reg = /home/;
 
-const str = 'Home, sweet home.';
-const myArray = str.match(reg);
-console.log(myArray);
+// const str = 'Home, sweet home.';
+// const myArray = str.match(reg);
+// console.log(myArray);
 
-const funnyQuote =
-  'If you see someone crying, ask if it is because of their haircut.';
-const regex1 = /someone/;
-const regex2 = /happy/;
+// const funnyQuote =
+//   'If you see someone crying, ask if it is because of their haircut.';
+// const regex1 = /someone/;
+// const regex2 = /happy/;
 
-console.log(funnyQuote.match(regex1));
-// => ["someone", index: 3, input: "If you see someone crying, ask if it is because of their haircut.", groups: undefined]
+// console.log(funnyQuote.match(regex1));
+// // => ["someone", index: 3, input: "If you see someone crying, ask if it is because of their haircut.", groups: undefined]
 
-funnyQuote.match(regex2);
-// => null
+// funnyQuote.match(regex2);
+// // => null
+
+// const arr = [1, 2, 3, 4];
+
+// arr.reverse();
+// // => [4, 3, 2, 1]
+// console.log(arr);
+
+// const deck = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// function middleTwo(deck) {
+//   return deck.slice(deck.length / 2 - 1, (deck.length / 2) + 1);
+// }
+
+// console.log(deck.length/2)
+// console.log(middleTwo(deck))
+
+const deck = [1, 6, 7, 7, 2, 1];
+const expected = [6, 7, 1, 1, 7, 2];
+
+ function middleTwo(deck) {
+  return deck.slice(deck.length / 2 - 1, deck.length / 2 + 1);
+}
+
+
+function sandwichTrick(deck) {
+  deck.reverse()
+  const top = deck.splice(0, 1)
+  const bot = deck.splice(deck.length - 1, 1)
+  deck.reverse().splice(deck.length / 2, 0, ...top, ...bot)
+  // splice(deck.length / 2, 0, top, bot)
+  // deck.splice(deck.length / 2, 0, deck[0], deck[deck.length - 1]).reverse();
+  // deck.splice(0, 1);
+  // deck.splice(deck.length - 1, 1);
+  // deck.reverse()
+  return deck;
+}
+
+console.log(sandwichTrick(deck));
